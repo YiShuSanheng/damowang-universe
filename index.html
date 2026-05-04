@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HORIZONIER / 地平线行者</title>
+    <meta name="description" content="HORIZONIER / 地平线行者：一个以宇宙入口为形式的个人网站。" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main id="app" class="app-shell" aria-live="polite">
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="HORIZONIER 首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="img">
+              <circle cx="32" cy="32" r="20" fill="none" stroke="currentColor" stroke-width="2" opacity=".86" />
+              <path d="M12 39c10-6 30-6 40 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+              <path d="M32 8v48M8 32h48" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".58" stroke-linecap="round" />
+              <circle cx="32" cy="32" r="4" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="brand-word">HORIZONIER</span>
+        </a>
+        <nav class="header-actions" aria-label="主要导航">
+          <a href="#about" class="about-link">关于我</a>
+          <a href="#home" class="enter-link"><span>✦</span> 进入宇宙</a>
+        </nav>
+      </header>
+
+      <section id="home-view" class="home-view page-view is-active" aria-label="宇宙入口首页">
+        <div class="stars-layer"></div>
+        <section class="hero-copy" aria-label="首页介绍">
+          <div class="copy-frame"></div>
+          <h1>
+            <span>晨线之上，金刃初开。</span>
+            <span>弧光未至，逐远不息。</span>
+          </h1>
+          <p>
+            这里是大魔王宇宙的入口，每一颗星球，<br />
+            都是我长期探索与深耕的世界。<br />
+            用键盘导航轨迹，选择你想进入的世界。
+          </p>
+        </section>
+
+        <section class="universe-stage" aria-label="星球轨道导航">
+          <div class="core" aria-hidden="true">
+            <div class="core-glow"></div>
+            <div class="core-label">大魔王核心<br /><small>HORIZONIER CORE</small></div>
+          </div>
+          <div class="orbit orbit-1"></div>
+          <div class="orbit orbit-2"></div>
+          <div class="orbit orbit-3"></div>
+          <div class="orbit orbit-4"></div>
+          <div class="planet-layer" id="planetLayer"></div>
+        </section>
+
+        <aside class="planet-card" id="planetCard" aria-label="当前选中星球"></aside>
+
+        <div class="keyboard-hints" aria-hidden="true">
+          <span class="key">←</span><span class="key">→</span><span>切换星球</span>
+          <span class="sep"></span>
+          <span class="key">Enter</span><span>进入星球</span>
+          <span class="sep"></span>
+          <span class="key">Esc</span><span>返回地平线</span>
+        </div>
+
+        <div class="horizon" aria-hidden="true"></div>
+      </section>
+
+      <section id="world-view" class="world-view page-view" aria-label="星球页面"></section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
